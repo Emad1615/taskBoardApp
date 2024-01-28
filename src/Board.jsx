@@ -42,7 +42,8 @@ function Board({
         >
           <LiaMarkerSolid />
         </button>
-        <ul className="taskList m-0 pb-10 pl-0 pr-0 pt-10">
+        {/* <ul className="taskList m-0 pb-10 pl-0 pr-0 pt-10"> */}
+        <ul className="grid grid-cols-5 gap-4">
           {tasks.map((task, idx) => (
             <TaskItem
               key={idx}
@@ -59,6 +60,7 @@ function Board({
         handleShow={handleShow}
         tags={tags}
         users={users}
+        setTasks={setTasks}
       />
       <ArchivedTasks
         showArchived={showArchived}

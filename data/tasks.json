@@ -1,190 +1,98 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "task title one",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.",
+      "title": "First task added manually ",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\nCurrently, two official plugins are available:\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\nHear the tracks you’ve liked.",
       "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "KG app",
+          "id": 3
+        },
+        {
+          "tag": "Speech Center app",
+          "id": 4
+        }
       ],
       "Memebers": [
         {
+          "userName": "A.Hassan",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 6,
+          "jobDescription": "Manager"
+        },
+        {
+          "userName": "Sameh",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 5,
+          "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
           "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/49"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/47"
+          "jobDescription": "Senior software developer"
         }
       ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
+      "createdAt": "2024-01-28T12:01:43.709Z",
+      "rating": 0,
+      "color": "#d37217",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "task title Two",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.",
+      "title": "OverTime Module (HR)",
+      "description": "By default, Tailwind includes grid-template-column utilities for creating basic grids with up to 12 equal width columns. You can customize these values by editing theme.gridTemplateColumns or theme.extend.gridTemplateColumns in your tailwind.config.js file.\n\nYou have direct access to the grid-template-columns CSS property here so you can make your custom column values as generic or as complicated and site-specific as you like.",
       "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
+        {
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "Employment module",
+          "id": 7
+        },
+        {
+          "tag": "HR module",
+          "id": 1
+        },
+        {
+          "tag": "Store mdoule",
+          "id": 2
+        }
       ],
       "Memebers": [
         {
-          "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
+          "userName": "A.Hassan",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 6,
+          "jobDescription": "Manager"
         },
         {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
           "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
+          "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2,
+          "jobDescription": "Team leader"
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1,
+          "jobDescription": "Senior Developer"
         }
       ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
-    },
-    {
-      "id": 3,
-      "title": "task title Three",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.",
-      "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
-      ],
-      "Memebers": [
-        {
-          "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
-        }
-      ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
-    },
-    {
-      "id": 4,
-      "title": "task title Four",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.",
-      "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
-      ],
-      "Memebers": [
-        {
-          "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
-        }
-      ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
-    },
-    {
-      "id": 5,
-      "title": "task title Five",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.",
-      "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
-      ],
-      "Memebers": [
-        {
-          "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
-        }
-      ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
-    },
-    {
-      "id": 6,
-      "title": "task title Six",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it. When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.",
-      "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
-      ],
-      "Memebers": [
-        {
-          "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
-        }
-      ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
+      "createdAt": "2024-01-28T13:25:06.414Z",
+      "rating": 0,
+      "color": "#50d88f",
+      "id": 2
     }
   ],
   "archivedTasks": [

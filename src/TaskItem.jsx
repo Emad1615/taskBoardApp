@@ -1,4 +1,3 @@
-import randomColor from 'randomcolor';
 import { Badge } from 'react-bootstrap';
 import { AiOutlinePushpin } from 'react-icons/ai';
 import { DateFormat } from './utils/helpers';
@@ -7,8 +6,8 @@ import RatingStar from './RatingStar';
 import { useState } from 'react';
 
 function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
-  const color = randomColor();
-  const { id, title, description, tags, Memebers, createdAt, rating } = task;
+  const { id, title, description, tags, Memebers, createdAt, rating, color } =
+    task;
   const [starRate, setStarRate] = useState(rating);
 
   return (
@@ -32,23 +31,23 @@ function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
         </blockquote>
         {tags.map((tag, idx) => (
           <Badge key={idx} bg="primary" className="m-1 text-sm font-thin">
-            {tag}
+            {tag.tag}
           </Badge>
         ))}
         <div className="mt-2 flex flex-grow gap-1">
           {Memebers.map((item) => (
             <span
               key={item.id}
-              title={item.name}
+              title={item.jobDescription}
               className="text-truncate rounded-lg bg-slate-800 p-1"
               style={{ fontSize: '.5rem' }}
             >
               <img
                 src={item.avatar}
-                alt={item.name}
+                alt={item.userName}
                 className="inline-block h-6 w-6 rounded-full"
               />
-              &nbsp; {item.name}
+              &nbsp; {item.userName}
             </span>
           ))}
         </div>

@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import { FaPlusCircle } from 'react-icons/fa';
 import TaskForm from './TaskForm';
 
-function CreateTask({ show, handleShow, tags, users }) {
+function CreateTask({ show, handleShow, tags, users, setTasks }) {
   return (
     <div>
       <Modal
@@ -19,7 +19,7 @@ function CreateTask({ show, handleShow, tags, users }) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <TaskForm tags={tags} users={users} />
+          <TaskForm tags={tags} users={users} setTasks={setTasks} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleShow}>

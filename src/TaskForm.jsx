@@ -2,15 +2,50 @@ import { useState } from 'react';
 import Markdown from 'react-markdown';
 import MultiSelector from './MultiSelector';
 import TypeAhead from './TypeAhead';
+import { IoMdAdd } from 'react-icons/io';
+import { createTask } from './services/apiBoard';
+import { IoReload } from 'react-icons/io5';
+import randomColor from 'randomcolor';
 
-function TaskForm({ tags, users }) {
+function TaskForm({ tags, users, setTasks }) {
+  const color = randomColor();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [nonSelectedTags, setNonSelectedTags] = useState(tags);
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectedUser, setSelectedUser] = useState([]);
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  async function HandleSubmit(e) {
+    e.preventDefault();
+    if (selectedUser.length === 0)
+      return setError('Please select at least one developer for this task');
+    else setError('');
+    if (selectedTags.length < 2)
+      return setError('Please select at least two or more tag for this task');
+    else setError('');
+    setIsLoading(true);
+    const taskData = {
+      title: title,
+      description: description,
+      tags: selectedTags,
+      Memebers: selectedUser,
+      createdAt: new Date(),
+      rating: 0,
+      color: color,
+    };
+    const task = await createTask(taskData);
+    setTasks((prevTasks) => [...prevTasks, task]);
+    setIsLoading(false);
+  }
   return (
-    <form className="flex flex-col gap-2 p-3  font-thin shadow-md">
+    <form
+      className="flex flex-col gap-2 p-3  font-thin shadow-md"
+      onSubmit={HandleSubmit}
+    >
+      {error && (
+        <p className="text-center font-semibold text-red-500">🔴 {error}</p>
+      )}
       <div>
         <label className="block pb-2 font-semibold">Title</label>
         <input
@@ -63,6 +98,19 @@ function TaskForm({ tags, users }) {
           setNonSelectedData={setNonSelectedTags}
           setSelectedData={setSelectedTags}
         />
+      </div>
+      <div className="flex flex-row ">
+        <button className="flex-grow-1 bg-teal-500 p-2 transition-all  ease-in hover:bg-teal-700">
+          {isLoading ? (
+            <>
+              Loading <IoReload className="inline-block" />
+            </>
+          ) : (
+            <>
+              Add Task to board <IoMdAdd className="inline-block" />
+            </>
+          )}
+        </button>
       </div>
     </form>
   );
