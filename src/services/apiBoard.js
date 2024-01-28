@@ -66,3 +66,19 @@ export async function createTask(user) {
     throw new Error(err.message);
   }
 }
+export async function rateTask(id, rate) {
+  try {
+    const res = await fetch(`${BASE_API}/tasks/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        rating: rate,
+      }),
+    });
+    if (!res.ok) throw new Error('An error occured during save user data');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}

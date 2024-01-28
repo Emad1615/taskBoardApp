@@ -4,6 +4,9 @@ import { DateFormat } from './utils/helpers';
 import TextExpander from './TextExpander';
 import RatingStar from './RatingStar';
 import { useState } from 'react';
+import { FaArchive } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
+import { IoCheckmarkDoneCircle } from 'react-icons/io5';
 
 function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
   const { id, title, description, tags, Memebers, createdAt, rating, color } =
@@ -12,7 +15,7 @@ function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
 
   return (
     <li
-      className="rotate-1 rounded "
+      className="relative rotate-1 rounded pb-4"
       style={{ background: color }}
       // onClick={()=>setSelectedID(prevID=> prevID!==id?id:null)}
     >
@@ -60,6 +63,19 @@ function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
         id={id}
         setTasks={setTasks}
       />
+      <div className="absolute bottom-0 w-full  p-1">
+        <div className="m-1 flex flex-row  bg-slate-700">
+          <button className="flex-grow-1 inline-block transition-all ease-in hover:bg-teal-500 hover:text-slate-700">
+            <FaArchive className="inline-block text-center " />
+          </button>
+          <button className="flex-grow-1 inline-block text-center transition-all ease-in hover:bg-sky-500 hover:text-slate-700">
+            <IoCheckmarkDoneCircle className="inline-block text-center " />
+          </button>
+          <button className="flex-grow-1 inline-block text-center  transition-all ease-in hover:bg-red-500 hover:text-slate-700">
+            <MdDelete className="inline-block text-center  " />
+          </button>
+        </div>
+      </div>
     </li>
   );
 }

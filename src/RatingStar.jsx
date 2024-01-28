@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { rateTask } from './services/apiBoard';
 function RatingStar({
   maxStarNumber = 6,
   color = '#ED8A19',
@@ -10,16 +11,12 @@ function RatingStar({
 }) {
   const [rating, setRating] = useState(defaultStarRate);
   const [tempRating, setTempRating] = useState(0);
-  function HandleRating(rate) {
+  async function HandleRating(rate) {
     setRating(rate);
     onRate(rate);
     if (id) {
-      setTasks((prevTasks) =>
-        prevTasks.map((task) => {
-          if (task.id === id) return { ...task, rating: rate };
-          else return task;
-        }),
-      );
+      await rateTask(id, rate);
+      // setTasks((prevTasks) => [...prevTasks, data]);
     }
   }
   return (
