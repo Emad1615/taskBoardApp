@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: 'Sora';
+}
+.taskList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  background: radial-gradient(
+    ellipse at center,
+    #ff3d00 0%,
+    #ff3d00 14%,
+    #fff 15%,
+    #334155 100%
+  );
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.loader::after,
+.loader::before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 4px;
+  background: #ff3d00;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transform-origin: 25% 0;
+  box-sizing: border-box;
+  animation: rotation 10s linear infinite;
+}
+.loader::before {
+  height: 22px;
+  width: 2px;
+  transform: translateX(-50%) rotate(0deg);
+  animation-duration: 1s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+body {
+  background-image: url('./assets/natural.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  object-fit: cover;
+  height: calc(100vh - 6rem);
+}
+
+.board {
+  background-image: linear-gradient(180deg, #12202b5e, #121313cf),
+    url('./assets/wooden-flooring-textured-background-design.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border: 15px solid #334155;
+  height: 50rem;
+}
+.header {
+  background-color: #334155;
+}
+.my-navbar-collapse {
+  height: 3.5rem;
+  transition: all 0.5s;
+  padding: 1rem;
+}
+.my-navbar-collapse.show {
+  height: 14rem;
+}
+.modal-header {
+  border: none !important;
+}
+.modal-content {
+  background-color: #334155 !important;
+  color: white !important;
+  font-size: 65%;
+}
+.modal-footer {
+  border: none !important;
+}
+/* .userCard::after {
+  content: '⭐';
+  width: 15px;
+  height: 15px;
+  background-color: tomato;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 50%;
+} */
+.rbt-input-main {
+  font-size: 0.8rem !important;
+  border-radius: 0.125rem !important;
+  background-color: #cbd5e1 !important;
+}
+.rbt-menu {
+  font-size: 0.8rem !important;
+  border: none !important ;
+  border-radius: 0rem !important;
+  margin-top: 0.1rem !important;
+  background-color: #f1f5f9 !important;
+  border: none !important;
+  margin-bottom: 0px !important;
+}
+.rbt-menu-pagination-option {
+  text-align: center !important;
+}
