@@ -24,6 +24,12 @@ export async function getTags() {
   const data = await res.json();
   return data;
 }
+export async function getDeletedTasks() {
+  const res = await fetch(`${BASE_API}/DeletedTasks`);
+  if (!res.ok) throw new Error('An error occured during fetch tasks data');
+  const data = await res.json();
+  return data;
+}
 export async function createUser(user) {
   try {
     const res = await fetch(`${BASE_API}/Users`, {
@@ -74,6 +80,58 @@ export async function rateTask(id, rate) {
       body: JSON.stringify({
         rating: rate,
       }),
+    });
+    if (!res.ok) throw new Error('An error occured during save user data');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+export async function addToArchive(task) {
+  try {
+    const res = await fetch(`${BASE_API}/archivedTasks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(task),
+    });
+    if (!res.ok) throw new Error('An error occured during save user data');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+export async function addToDeletedTasks(task) {
+  try {
+    const res = await fetch(`${BASE_API}/DeletedTasks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(task),
+    });
+    if (!res.ok) throw new Error('An error occured during save user data');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+export async function deleteTask(id) {
+  try {
+    const res = await fetch(`${BASE_API}/tasks/${id}`, {
+      method: 'DELETE',
+    });
+    if (!res.ok) throw new Error('An error occured during save user data');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+export async function deleteArchivedTask(id) {
+  try {
+    const res = await fetch(`${BASE_API}/archivedTasks/${id}`, {
+      method: 'DELETE',
     });
     if (!res.ok) throw new Error('An error occured during save user data');
     const data = await res.json();

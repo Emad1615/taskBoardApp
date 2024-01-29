@@ -7,7 +7,7 @@ import ArchivedTasks from './ArchivedTasks';
 import UsersList from './UsersList';
 import DeletedTasks from './DeletedTasks';
 import TagsList from './TagsList';
-
+import { useMediaQuery } from 'react-responsive';
 function Board({
   tasks,
   setTasks,
@@ -27,9 +27,12 @@ function Board({
   setShowTags,
   tags,
   setTags,
+  deletedTasks,
+  setDeletedTasks,
 }) {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow((prevShow) => !prevShow);
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
 
   return (
     <>
@@ -42,15 +45,24 @@ function Board({
         >
           <LiaMarkerSolid />
         </button>
+        {tasks.length === 0 && (
+          <p className="boardTitle text-center text-xl font-extrabold text-teal-500">
+            Fire your motivation now post your task here (⊙﹏⊙)
+          </p>
+        )}
         {/* <ul className="taskList m-0 pb-10 pl-0 pr-0 pt-10"> */}
-        <ul className="grid grid-cols-5 gap-4">
+        <ul
+          className={`${isTabletOrMobile ? 'taskList m-0 pb-10 pl-0 pr-0 pt-10' : 'grid grid-cols-5 gap-4'}`}
+        >
           {tasks.map((task, idx) => (
             <TaskItem
               key={idx}
               task={task}
               setTasks={setTasks}
+              setArchivedTasks={setArchivedTasks}
               selectedID={selectedID}
               setSelectedID={setSelectedID}
+              setDeletedTasks={setDeletedTasks}
             />
           ))}
         </ul>
@@ -81,7 +93,11 @@ function Board({
         tags={tags}
         setTags={setTags}
       />
-      <DeletedTasks showDeleted={showDeleted} setShowDeleted={setShowDeleted} />
+      <DeletedTasks
+        showDeleted={showDeleted}
+        setShowDeleted={setShowDeleted}
+        deletedTasks={deletedTasks}
+      />
     </>
   );
 }

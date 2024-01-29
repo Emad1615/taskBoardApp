@@ -1,5 +1,6 @@
 import { AiOutlinePushpin } from 'react-icons/ai';
 import { DateFormat } from './utils/helpers';
+import { createTask, deleteArchivedTask } from './services/apiBoard';
 
 function ArchivedItem({
   item,
@@ -9,10 +10,13 @@ function ArchivedItem({
   setTasks,
 }) {
   const { id, title, description, tags, Memebers, createdAt, rating } = item;
-  function AddArchivedItemToBoard(item) {
-    const tasks = archivedTasks.filter((task) => task.id !== item.id);
-    setArchivedTasks(tasks);
-    setTasks((prevTasks) => [...prevTasks, item]);
+  async function AddArchivedItemToBoard(item) {
+    const data = await createTask(item);
+    await deleteArchivedTask(item.id);
+    setArchivedTasks((prevTasks) =>
+      prevTasks.filter((task) => task.id !== item.id),
+    );
+    setTasks((prevTasks) => [...prevTasks, data]);
   }
   return (
     <li className="relative m-1 flex flex-row items-center justify-between  gap-2  rounded bg-slate-800 pb-2 pl-2 pr-2 pt-2">

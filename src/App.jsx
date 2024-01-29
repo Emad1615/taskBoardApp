@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import QuickNav from './QuickNav';
 import {
   getArchivedTasks,
+  getDeletedTasks,
   getTags,
   getTasks,
   getUsers,
@@ -14,6 +15,7 @@ function App() {
   const [archivedTasks, setArchivedTasks] = useState([]);
   const [users, setUsers] = useState([]);
   const [tags, setTags] = useState([]);
+  const [deletedTasks, setDeletedTasks] = useState([]);
   const [selectedID, setSelectedID] = useState(null);
   const [showArchived, setShowArchived] = useState(false);
   const [showUsers, setShowUsers] = useState(false);
@@ -25,6 +27,7 @@ function App() {
       setArchivedTasks(await getArchivedTasks());
       setUsers(await getUsers());
       setTags(await getTags());
+      setDeletedTasks(await getDeletedTasks());
     }
     loadTasks();
   }, []);
@@ -57,6 +60,8 @@ function App() {
         setShowTags={setShowTags}
         tags={tags}
         setTags={setTags}
+        deletedTasks={deletedTasks}
+        setDeletedTasks={setDeletedTasks}
       />
       <QuickNav
         showArchived={showArchived}

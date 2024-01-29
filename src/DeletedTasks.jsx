@@ -1,8 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaTrash } from 'react-icons/fa';
+import DeletedItem from './DeletedItem';
 
-function DeletedTasks({ showDeleted, setShowDeleted }) {
+function DeletedTasks({ showDeleted, setShowDeleted, deletedTasks }) {
   return (
     <div>
       <Modal
@@ -18,8 +19,16 @@ function DeletedTasks({ showDeleted, setShowDeleted }) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Do not even try to press
-          escape key.
+          <ul>
+            {deletedTasks.length === 0 && (
+              <p className="text-center font-semibold text-slate-400">
+                No deleted tasks added before
+              </p>
+            )}
+            {deletedTasks.map((item, idx) => (
+              <DeletedItem key={idx} item={item} />
+            ))}
+          </ul>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={() => setShowDeleted((x) => !x)}>

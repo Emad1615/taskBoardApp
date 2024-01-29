@@ -1,48 +1,6 @@
 {
   "tasks": [
     {
-      "title": "First task added manually ",
-      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\nCurrently, two official plugins are available:\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\nHear the tracks you’ve liked.",
-      "tags": [
-        {
-          "tag": "Accounting module",
-          "id": 9
-        },
-        {
-          "tag": "KG app",
-          "id": 3
-        },
-        {
-          "tag": "Speech Center app",
-          "id": 4
-        }
-      ],
-      "Memebers": [
-        {
-          "userName": "A.Hassan",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 6,
-          "jobDescription": "Manager"
-        },
-        {
-          "userName": "Sameh",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 5,
-          "jobDescription": "Project manager"
-        },
-        {
-          "userName": "Emad Ismail",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 1,
-          "jobDescription": "Senior software developer"
-        }
-      ],
-      "createdAt": "2024-01-28T12:01:43.709Z",
-      "rating": 5,
-      "color": "#d37217",
-      "id": 1
-    },
-    {
       "title": "OverTime Module (HR)",
       "description": "By default, Tailwind includes grid-template-column utilities for creating basic grids with up to 12 equal width columns. You can customize these values by editing theme.gridTemplateColumns or theme.extend.gridTemplateColumns in your tailwind.config.js file.\n\nYou have direct access to the grid-template-columns CSS property here so you can make your custom column values as generic or as complicated and site-specific as you like.",
       "tags": [
@@ -93,73 +51,95 @@
       "rating": 3,
       "color": "#50d88f",
       "id": 2
-    }
-  ],
-  "archivedTasks": [
-    {
-      "id": 15,
-      "title": "task title No.15",
-      "description": "When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it..",
-      "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
-      ],
-      "Memebers": [
-        {
-          "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
-        }
-      ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
     },
     {
-      "id": 16,
-      "title": "task title No.16",
-      "description": "When backdrop is set to static, the modal will not close when When backdrop is set to static, the modal will not close when When backdrop is set to static, the modal will not close when.",
+      "title": "First task added manually ",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\nCurrently, two official plugins are available:\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\nHear the tracks you’ve liked.",
       "tags": [
-        "Html",
-        "CSS",
-        "Javascript",
-        "React",
-        "Tailwind CSS"
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "KG app",
+          "id": 3
+        },
+        {
+          "tag": "Speech Center app",
+          "id": 4
+        }
       ],
       "Memebers": [
         {
+          "userName": "A.Hassan",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 6,
+          "jobDescription": "Manager"
+        },
+        {
+          "userName": "Sameh",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 5,
+          "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
           "id": 1,
-          "name": "Emad Ismail Mohammed",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 2,
-          "name": "Mohammed Ahmed Kassim",
-          "avatar": "https://i.pravatar.cc/48"
-        },
-        {
-          "id": 3,
-          "name": "Mohmoud Noah",
-          "avatar": "https://i.pravatar.cc/48"
+          "jobDescription": "Senior software developer"
         }
       ],
-      "createdAt": "JAN 21, 2024, 09:59 AM",
-      "rating": 0
+      "createdAt": "2024-01-28T12:01:43.709Z",
+      "rating": 5,
+      "color": "#d37217",
+      "id": 1
     }
   ],
-  "DeletedTasks": [],
+  "archivedTasks": [],
+  "DeletedTasks": [
+    {
+      "title": "Test task title manually",
+      "description": "Using custom values\n​\nCustomizing your theme\nBy default, Tailwind includes four general purpose grid-auto-columns utilities. You can customize these values by editing theme.gridAutoColumns or theme.extend.gridAutoColumns in your tailwind.config.js file.",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "Alrazis app",
+          "id": 10
+        },
+        {
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "Employment module",
+          "id": 7
+        },
+        {
+          "tag": "HR module",
+          "id": 1
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1
+        },
+        {
+          "userName": "A.Salah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 7
+        }
+      ],
+      "createdAt": "2024-01-29T12:46:41.619Z",
+      "rating": 0,
+      "color": "#bd63ed",
+      "id": 1
+    }
+  ],
   "Users": [
     {
       "userName": "Emad Ismail",

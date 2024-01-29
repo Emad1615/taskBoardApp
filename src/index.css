@@ -142,3 +142,7 @@ body {
 .rbt-menu-pagination-option {
   text-align: center !important;
 }
+.boardTitle {
+  font-family: cursive;
+  font-size: 1.5rem;
+}

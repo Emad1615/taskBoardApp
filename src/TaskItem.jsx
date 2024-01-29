@@ -7,8 +7,20 @@ import { useState } from 'react';
 import { FaArchive } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
 import { IoCheckmarkDoneCircle } from 'react-icons/io5';
+import {
+  addToArchive,
+  addToDeletedTasks,
+  deleteTask,
+} from './services/apiBoard';
 
-function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
+function TaskItem({
+  task,
+  setTasks,
+  selectedID,
+  setSelectedID,
+  setArchivedTasks,
+  setDeletedTasks,
+}) {
   const { id, title, description, tags, Memebers, createdAt, rating, color } =
     task;
   const [starRate, setStarRate] = useState(rating);
@@ -19,7 +31,10 @@ function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
       style={{ background: color }}
       // onClick={()=>setSelectedID(prevID=> prevID!==id?id:null)}
     >
-      <h5 className="m-1 rounded-lg bg-gray-700 p-1 text-sm font-semibold uppercase text-gray-100">
+      <h5
+        className="text-truncate m-1 rounded-lg bg-gray-700 p-1 text-sm font-semibold uppercase text-gray-100"
+        title={title}
+      >
         <AiOutlinePushpin className="inline-block text-xl" /> {title}
         <time className="block pl-6 font-thin" style={{ fontSize: '.6rem' }}>
           {DateFormat(createdAt)}
@@ -66,20 +81,38 @@ function TaskItem({ task, setTasks, selectedID, setSelectedID }) {
       <div className="absolute bottom-0 w-full  p-1">
         <div className="m-1 flex flex-row  bg-slate-700">
           <button
+            onClick={async () => {
+              await addToArchive(task);
+              await deleteTask(id);
+              setTasks((prevTasks) => prevTasks.filter((x) => x.id !== id));
+              setArchivedTasks((prevArchivedTasks) => [
+                ...prevArchivedTasks,
+                task,
+              ]);
+            }}
             title="Add to Archive"
-            className="flex-grow-1 inline-block transition-all ease-in hover:bg-teal-500 hover:text-slate-700"
+            className="flex-grow-1 inline-block transition-all ease-in hover:bg-slate-900 "
           >
             <FaArchive className="inline-block text-center " />
           </button>
           <button
             title="Done 👍"
-            className="flex-grow-1 inline-block text-center transition-all ease-in hover:bg-sky-500 hover:text-slate-700"
+            className="flex-grow-1 inline-block text-center transition-all ease-in hover:bg-slate-900 "
           >
             <IoCheckmarkDoneCircle className="inline-block text-center " />
           </button>
           <button
+            onClick={async () => {
+              await addToDeletedTasks(task);
+              setDeletedTasks((prevDeletedTasks) => [
+                ...prevDeletedTasks,
+                task,
+              ]);
+              await deleteTask(id);
+              setTasks((prevTasks) => prevTasks.filter((x) => x.id !== id));
+            }}
             title="Delete task"
-            className="flex-grow-1 inline-block text-center  transition-all ease-in hover:bg-red-500 hover:text-slate-700"
+            className="flex-grow-1 inline-block text-center  transition-all ease-in hover:bg-slate-900 "
           >
             <MdDelete className="inline-block text-center  " />
           </button>

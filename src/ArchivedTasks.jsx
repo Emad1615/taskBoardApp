@@ -26,6 +26,11 @@ function ArchivedTasks({
         </Modal.Header>
         <Modal.Body>
           <ul>
+            {archivedTasks.length === 0 && (
+              <p className="text-center font-semibold text-slate-400">
+                No archived tasks added before
+              </p>
+            )}
             {archivedTasks.map((item, idx) => (
               <ArchivedItem
                 key={idx}
