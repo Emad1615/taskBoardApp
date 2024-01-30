@@ -1,6 +1,182 @@
 {
   "tasks": [
     {
+      "title": "Task Number one ",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "Alrazis app",
+          "id": 10
+        },
+        {
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "HR module",
+          "id": 1
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "Sameh",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 5,
+          "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 3
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1
+        }
+      ],
+      "createdAt": "2024-01-30T11:22:03.842Z",
+      "rating": 0,
+      "color": "#d6913e",
+      "id": 1
+    },
+    {
+      "title": "SKC Enhancement applications",
+      "description": "The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "KG app",
+          "id": 3
+        },
+        {
+          "tag": "Speech Center app",
+          "id": 4
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 3
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1,
+          "jobDescription": "Senior Developer"
+        }
+      ],
+      "createdAt": "2024-01-30T12:06:34.859Z",
+      "rating": 0,
+      "color": "#51f246",
+      "id": 3
+    },
+    {
+      "title": "Hear the tracks you’ve liked",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\n\nThe longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "Alrazis app",
+          "id": 10
+        },
+        {
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "HR module",
+          "id": 1
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 3
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1
+        }
+      ],
+      "createdAt": "2024-01-30T12:11:35.476Z",
+      "rating": 0,
+      "color": "#ff425e",
+      "id": 4
+    }
+  ],
+  "completedTasks": [
+    {
+      "title": "First task added manually ",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\nCurrently, two official plugins are available:\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\nHear the tracks you’ve liked.",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "KG app",
+          "id": 3
+        },
+        {
+          "tag": "Speech Center app",
+          "id": 4
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "A.Hassan",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 6,
+          "jobDescription": "Manager"
+        },
+        {
+          "userName": "Sameh",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 5,
+          "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1,
+          "jobDescription": "Senior software developer"
+        }
+      ],
+      "createdAt": "2024-01-28T12:01:43.709Z",
+      "rating": 5,
+      "color": "#d37217",
+      "id": 1
+    },
+    {
       "title": "OverTime Module (HR)",
       "description": "By default, Tailwind includes grid-template-column utilities for creating basic grids with up to 12 equal width columns. You can customize these values by editing theme.gridTemplateColumns or theme.extend.gridTemplateColumns in your tailwind.config.js file.\n\nYou have direct access to the grid-template-columns CSS property here so you can make your custom column values as generic or as complicated and site-specific as you like.",
       "tags": [
@@ -51,51 +227,78 @@
       "rating": 3,
       "color": "#50d88f",
       "id": 2
-    },
+    }
+  ],
+  "archivedTasks": [
     {
-      "title": "First task added manually ",
-      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\nCurrently, two official plugins are available:\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\nHear the tracks you’ve liked.",
+      "title": "Enhancement Hr Module",
+      "description": "The longest word in any of the major English language dictionaries is pneumonoultramicroscopicsilicovolcanoconiosis, a word that refers to a lung disease contracted from the inhalation of very fine silica particles, specifically from a volcano; medically, it is the same as silicosis.\nThis template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\n抗衡不屈不挠 (kànghéng bùqū bùnáo) 这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n\n\n\nCurrently, two official plugins are available:\n\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh\n",
       "tags": [
         {
           "tag": "Accounting module",
           "id": 9
         },
         {
-          "tag": "KG app",
-          "id": 3
+          "tag": "Alrazis app",
+          "id": 10
         },
         {
-          "tag": "Speech Center app",
-          "id": 4
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "Employment module",
+          "id": 7
+        },
+        {
+          "tag": "HR module",
+          "id": 1
         }
       ],
       "Memebers": [
         {
           "userName": "A.Hassan",
           "avatar": "https://i.pravatar.cc/50",
-          "id": 6,
-          "jobDescription": "Manager"
+          "id": 6
         },
         {
           "userName": "Sameh",
           "avatar": "https://i.pravatar.cc/50",
-          "id": 5,
+          "id": 5
+        },
+        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 3,
           "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2
+        },
+        {
+          "userName": "Dr.Mohamed",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 4
+        },
+        {
+          "userName": "A.Salah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 7
         },
         {
           "userName": "Emad Ismail",
           "avatar": "https://i.pravatar.cc/50",
-          "id": 1,
-          "jobDescription": "Senior software developer"
+          "id": 1
         }
       ],
-      "createdAt": "2024-01-28T12:01:43.709Z",
-      "rating": 5,
-      "color": "#d37217",
-      "id": 1
+      "createdAt": "2024-01-30T11:24:00.034Z",
+      "rating": 0,
+      "color": "#2ce047",
+      "id": 2
     }
   ],
-  "archivedTasks": [],
   "DeletedTasks": [
     {
       "title": "Test task title manually",
@@ -138,6 +341,93 @@
       "rating": 0,
       "color": "#bd63ed",
       "id": 1
+    },
+    {
+      "title": "Word Break",
+      "description": "抗衡不屈不挠 (kànghéng bùqū bùnáo) 这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n\n抗衡不屈不挠  这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n\n抗衡不屈不挠  这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n抗衡不屈不挠  这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n抗衡不屈不挠  这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n抗衡不屈不挠  这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。\n抗衡不屈不挠  这是一个长词，意思是不畏强暴，奋勇抗争，坚定不移，永不放弃。这个词通常用来描述那些在面对困难和挑战时坚持自己信念的人， 他们克服一切困难，不屈不挠地追求自己的目标。无论遇到多大的挑战，他们都能够坚持到底，不放弃，最终获得胜利。",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "Alrazis app",
+          "id": 10
+        },
+        {
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "Employment module",
+          "id": 7
+        },
+        {
+          "tag": "HR module",
+          "id": 1
+        },
+        {
+          "tag": "KG app",
+          "id": 3
+        },
+        {
+          "tag": "Schoolizor app",
+          "id": 6
+        },
+        {
+          "tag": "Skills app",
+          "id": 8
+        },
+        {
+          "tag": "Speech Center app",
+          "id": 4
+        },
+        {
+          "tag": "Store mdoule",
+          "id": 2
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "A.Hassan",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 6
+        },
+        {
+          "userName": "Sameh",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 5
+        },
+        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 3
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1
+        },
+        {
+          "userName": "Dr.Mohamed",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 4
+        },
+        {
+          "userName": "A.Salah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 7
+        }
+      ],
+      "createdAt": "2024-01-30T11:30:57.634Z",
+      "rating": 0,
+      "color": "#19c4c6",
+      "id": 3
     }
   ],
   "Users": [

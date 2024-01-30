@@ -19,7 +19,12 @@ function CreateTask({ show, handleShow, tags, users, setTasks }) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <TaskForm tags={tags} users={users} setTasks={setTasks} />
+          <TaskForm
+            tags={tags}
+            users={users}
+            setTasks={setTasks}
+            handleShow={handleShow}
+          />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleShow}>

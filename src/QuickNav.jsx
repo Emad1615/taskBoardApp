@@ -5,6 +5,7 @@ import { FaUsers } from 'react-icons/fa';
 import { FaTrash } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 import { FaTag } from 'react-icons/fa';
+import { IoCheckmarkDoneCircle } from 'react-icons/io5';
 
 function QuickNav({
   showArchived,
@@ -14,6 +15,7 @@ function QuickNav({
   showDeleted,
   setShowDeleted,
   setShowTags,
+  setShowFinishedTasks,
 }) {
   const [show, setShow] = useState(false);
   return (
@@ -22,6 +24,9 @@ function QuickNav({
     >
       <button className="text-white" onClick={() => setShow((show) => !show)}>
         {show ? <IoClose /> : <FaThList />}
+      </button>
+      <button onClick={() => setShowFinishedTasks((s) => !s)}>
+        <IoCheckmarkDoneCircle title="Finished tasks" className="text-white" />
       </button>
       <button title="Archive box" onClick={() => setShowArchived((s) => !s)}>
         <FaArchive className="text-white" />

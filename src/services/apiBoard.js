@@ -6,6 +6,12 @@ export async function getTasks() {
   const data = await res.json();
   return data;
 }
+export async function getCompletetdTasks() {
+  const res = await fetch(`${BASE_API}/completedTasks`);
+  if (!res.ok) throw new Error('An error occured during fetch tasks data');
+  const data = await res.json();
+  return data;
+}
 export async function getArchivedTasks() {
   const res = await fetch(`${BASE_API}/archivedTasks`);
   if (!res.ok) throw new Error('An error occured during fetch tasks data');
@@ -132,6 +138,20 @@ export async function deleteArchivedTask(id) {
   try {
     const res = await fetch(`${BASE_API}/archivedTasks/${id}`, {
       method: 'DELETE',
+    });
+    if (!res.ok) throw new Error('An error occured during save user data');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+export async function addToCompletedTasks(task) {
+  try {
+    const res = await fetch(`${BASE_API}/completedTasks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(task),
     });
     if (!res.ok) throw new Error('An error occured during save user data');
     const data = await res.json();

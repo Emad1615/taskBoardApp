@@ -7,7 +7,7 @@ import { createTask } from './services/apiBoard';
 import { IoReload } from 'react-icons/io5';
 import randomColor from 'randomcolor';
 
-function TaskForm({ tags, users, setTasks }) {
+function TaskForm({ tags, users, setTasks, handleShow }) {
   const color = randomColor();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -37,6 +37,7 @@ function TaskForm({ tags, users, setTasks }) {
     const task = await createTask(taskData);
     setTasks((prevTasks) => [...prevTasks, task]);
     setIsLoading(false);
+    handleShow((prevShow) => !prevShow);
   }
   return (
     <form

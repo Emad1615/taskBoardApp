@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import QuickNav from './QuickNav';
 import {
   getArchivedTasks,
+  getCompletetdTasks,
   getDeletedTasks,
   getTags,
   getTasks,
@@ -21,6 +22,9 @@ function App() {
   const [showUsers, setShowUsers] = useState(false);
   const [showTags, setShowTags] = useState(false);
   const [showDeleted, setShowDeleted] = useState(false);
+  const [showFinishedTasks, setShowFinishedTasks] = useState(false);
+  const [completedTasks, setCompletedTasks] = useState([]);
+
   useEffect(() => {
     async function loadTasks() {
       setTasks(await getTasks());
@@ -28,6 +32,7 @@ function App() {
       setUsers(await getUsers());
       setTags(await getTags());
       setDeletedTasks(await getDeletedTasks());
+      setCompletedTasks(await getCompletetdTasks());
     }
     loadTasks();
   }, []);
@@ -62,6 +67,10 @@ function App() {
         setTags={setTags}
         deletedTasks={deletedTasks}
         setDeletedTasks={setDeletedTasks}
+        showFinishedTasks={showFinishedTasks}
+        setShowFinishedTasks={setShowFinishedTasks}
+        completedTasks={completedTasks}
+        setCompletedTasks={setCompletedTasks}
       />
       <QuickNav
         showArchived={showArchived}
@@ -71,6 +80,7 @@ function App() {
         showDeleted={showDeleted}
         setShowDeleted={setShowDeleted}
         setShowTags={setShowTags}
+        setShowFinishedTasks={setShowFinishedTasks}
       />
     </div>
   );

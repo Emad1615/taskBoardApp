@@ -9,6 +9,7 @@ import { MdDelete } from 'react-icons/md';
 import { IoCheckmarkDoneCircle } from 'react-icons/io5';
 import {
   addToArchive,
+  addToCompletedTasks,
   addToDeletedTasks,
   deleteTask,
 } from './services/apiBoard';
@@ -20,6 +21,7 @@ function TaskItem({
   setSelectedID,
   setArchivedTasks,
   setDeletedTasks,
+  setCompletedTasks,
 }) {
   const { id, title, description, tags, Memebers, createdAt, rating, color } =
     task;
@@ -52,12 +54,12 @@ function TaskItem({
             {tag.tag}
           </Badge>
         ))}
-        <div className="mt-2 flex flex-grow gap-1">
+        <div className="mt-2 flex  flex-wrap gap-1">
           {Memebers.map((item) => (
             <span
               key={item.id}
               title={item.jobDescription}
-              className="text-truncate rounded-lg bg-slate-800 p-1"
+              className="text-truncate   rounded-lg bg-slate-800 p-1"
               style={{ fontSize: '.5rem' }}
             >
               <img
@@ -96,6 +98,12 @@ function TaskItem({
             <FaArchive className="inline-block text-center " />
           </button>
           <button
+            onClick={async () => {
+              await addToCompletedTasks(task);
+              setCompletedTasks((prevTasks) => [...prevTasks, task]);
+              await deleteTask(id);
+              setTasks((prevTasks) => prevTasks.filter((x) => x.id !== id));
+            }}
             title="Done 👍"
             className="flex-grow-1 inline-block text-center transition-all ease-in hover:bg-slate-900 "
           >

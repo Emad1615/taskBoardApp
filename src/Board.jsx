@@ -8,6 +8,7 @@ import UsersList from './UsersList';
 import DeletedTasks from './DeletedTasks';
 import TagsList from './TagsList';
 import { useMediaQuery } from 'react-responsive';
+import FinishedTasks from './FinishedTasks';
 function Board({
   tasks,
   setTasks,
@@ -29,6 +30,10 @@ function Board({
   setTags,
   deletedTasks,
   setDeletedTasks,
+  showFinishedTasks,
+  setShowFinishedTasks,
+  completedTasks,
+  setCompletedTasks,
 }) {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow((prevShow) => !prevShow);
@@ -63,6 +68,7 @@ function Board({
               selectedID={selectedID}
               setSelectedID={setSelectedID}
               setDeletedTasks={setDeletedTasks}
+              setCompletedTasks={setCompletedTasks}
             />
           ))}
         </ul>
@@ -97,6 +103,12 @@ function Board({
         showDeleted={showDeleted}
         setShowDeleted={setShowDeleted}
         deletedTasks={deletedTasks}
+      />
+      <FinishedTasks
+        showFinishedTasks={showFinishedTasks}
+        setShowFinishedTasks={setShowFinishedTasks}
+        completedTasks={completedTasks}
+        setCompletedTasks={setCompletedTasks}
       />
     </>
   );
