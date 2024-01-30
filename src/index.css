@@ -115,16 +115,17 @@ body {
 .modal-footer {
   border: none !important;
 }
-/* .userCard::after {
-  content: '⭐';
-  width: 15px;
-  height: 15px;
+.Notifications::after {
+  content: '';
+  width: 7px;
+  height: 7px;
   background-color: tomato;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 12px;
+  left: 13px;
   border-bottom-right-radius: 50%;
-} */
+  border-radius: 100%;
+}
 .rbt-input-main {
   font-size: 0.8rem !important;
   border-radius: 0.125rem !important;
