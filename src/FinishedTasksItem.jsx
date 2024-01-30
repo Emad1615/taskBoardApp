@@ -35,7 +35,7 @@ function FinishedTasksItem({ item }) {
             {tag.tag}
           </Badge>
         ))}
-        <div className="mt-2 flex flex-grow gap-1">
+        <div className="mt-2 flex flex-grow flex-wrap gap-1">
           {Memebers.map((item) => (
             <span
               key={item.id}
