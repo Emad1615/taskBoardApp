@@ -11,6 +11,7 @@ import { useMediaQuery } from 'react-responsive';
 import FinishedTasks from './FinishedTasks';
 function Board({
   tasks,
+  queryResult,
   setTasks,
   archivedTasks,
   setArchivedTasks,
@@ -59,7 +60,7 @@ function Board({
         <ul
           className={`${isTabletOrMobile ? 'taskList m-0 pb-10 pl-0 pr-0 pt-10' : 'grid grid-cols-5 gap-4'}`}
         >
-          {tasks.map((task, idx) => (
+          {queryResult.map((task, idx) => (
             <TaskItem
               key={idx}
               task={task}

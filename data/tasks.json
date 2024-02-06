@@ -82,6 +82,55 @@
       "rating": 0,
       "color": "#ff425e",
       "id": 4
+    },
+    {
+      "title": "Task Number one ",
+      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh",
+      "tags": [
+        {
+          "tag": "Accounting module",
+          "id": 9
+        },
+        {
+          "tag": "Alrazis app",
+          "id": 10
+        },
+        {
+          "tag": "EgyHarvest app",
+          "id": 5
+        },
+        {
+          "tag": "HR module",
+          "id": 1
+        }
+      ],
+      "Memebers": [
+        {
+          "userName": "Sameh",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 5,
+          "jobDescription": "Project manager"
+        },
+        {
+          "userName": "Noah",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 3
+        },
+        {
+          "userName": "Mo.Kassim",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 2
+        },
+        {
+          "userName": "Emad Ismail",
+          "avatar": "https://i.pravatar.cc/50",
+          "id": 1
+        }
+      ],
+      "createdAt": "2024-01-30T11:22:03.842Z",
+      "rating": 3,
+      "color": "#d6913e",
+      "id": 1
     }
   ],
   "completedTasks": [
@@ -154,57 +203,7 @@
       "id": 2
     }
   ],
-  "archivedTasks": [
-    {
-      "title": "Task Number one ",
-      "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n@vitejs/plugin-react uses Babel for Fast Refresh\n@vitejs/plugin-react-swc uses SWC for Fast Refresh",
-      "tags": [
-        {
-          "tag": "Accounting module",
-          "id": 9
-        },
-        {
-          "tag": "Alrazis app",
-          "id": 10
-        },
-        {
-          "tag": "EgyHarvest app",
-          "id": 5
-        },
-        {
-          "tag": "HR module",
-          "id": 1
-        }
-      ],
-      "Memebers": [
-        {
-          "userName": "Sameh",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 5,
-          "jobDescription": "Project manager"
-        },
-        {
-          "userName": "Noah",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 3
-        },
-        {
-          "userName": "Mo.Kassim",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 2
-        },
-        {
-          "userName": "Emad Ismail",
-          "avatar": "https://i.pravatar.cc/50",
-          "id": 1
-        }
-      ],
-      "createdAt": "2024-01-30T11:22:03.842Z",
-      "rating": 3,
-      "color": "#d6913e",
-      "id": 1
-    }
-  ],
+  "archivedTasks": [],
   "DeletedTasks": [
     {
       "title": "Test task title manually",

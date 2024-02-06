@@ -11,6 +11,7 @@ import {
   getTasks,
   getUsers,
 } from './services/apiBoard';
+import SearchQuery from './SearchQuery';
 function App() {
   const [tasks, setTasks] = useState([]);
   const [archivedTasks, setArchivedTasks] = useState([]);
@@ -24,7 +25,17 @@ function App() {
   const [showDeleted, setShowDeleted] = useState(false);
   const [showFinishedTasks, setShowFinishedTasks] = useState(false);
   const [completedTasks, setCompletedTasks] = useState([]);
+  const [query, setQuery] = useState('');
 
+  const queryResult =
+    query.length >= 3
+      ? tasks.filter((task) =>
+          `${task.title} ${task.tags.map((z) => z.tag).join(' ')}`
+            .toLowerCase()
+            .includes(query.toLowerCase()),
+        )
+      : tasks;
+  console.log(queryResult);
   useEffect(() => {
     async function loadTasks() {
       setTasks(await getTasks());
@@ -45,8 +56,9 @@ function App() {
   }, []);
   return (
     <div className=" relative w-full">
-      <Header />
+      <Header query={query} setQuery={setQuery} />
       <Board
+        queryResult={queryResult}
         tasks={tasks}
         setTasks={setTasks}
         archivedTasks={archivedTasks}
